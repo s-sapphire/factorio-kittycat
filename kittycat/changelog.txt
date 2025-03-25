@@ -1,8 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: TODO
+  Changes:
+    - Fixed the categorization of things in the previous changelog
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 2025-03-25
   Bugfixes:
     - The cat item is no longer hidden
+
+  Changes:
     - Added setting to make cats invincible
     - Renamed mod to "Kitty Cat" to make it more unique
 ---------------------------------------------------------------------------------------------------
