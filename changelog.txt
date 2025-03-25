@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2025-03-25
+  Bugfixes:
+    - The cat item is no longer hidden
+    - Added setting to make cats invincible
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2025-03-17
+  Major Features:
+    - Initial release
+    - Added Space Age compatiblity
+    - Instead of satellites, in Space Age, cats are required to pilot space platforms
+    - Cats can only be lured on surfaces with at least a little atmosphere
+
+  Changes:
+    - Ported https://mods.factorio.com/mod/petcat to Factorio 2.0
+    - Easter egg is now optional (default: enabled)
+    - Cross-mod support has been left in, though none of the supported mods have updated to 2.0, so it is untested
+
+  Known Issues:
+    - Cat-Player collisions cannot be disabled, and the setting has been removed
+    - The Easter egg can be used in more places than intended, making it overpowered

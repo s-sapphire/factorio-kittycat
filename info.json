@@ -1,0 +1,11 @@
+{
+    "name": "kittycat",
+    "title": "Kitty Cat",
+    "author": "Sapphire",
+    "description": "Adds pet cats to the game.",
+    "factorio_version": "2.0",
+    "version": "0.2.1",
+    "dependencies": [
+        "base >= 2.0", "? space-age >= 2.0",
+    ]
+}
