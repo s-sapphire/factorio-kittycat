@@ -269,7 +269,6 @@ local cat_unit = {
     "player-creation",
   },
   collision_box = {{-0.3, -0.7}, {0.9, 0.7}},
-  --collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
   selection_box = {{-0.3, -0.7}, {0.9, 0.7}},
   collision_mask = collision_mask,
   min_pursue_time = 10 * 60,
@@ -279,7 +278,6 @@ local cat_unit = {
   distance_per_frame = 0.1,
   movement_speed = 0.2,
   healing_per_tick = 0.02,
-  --pollution_to_join_attack = 20,
   distraction_cooldown = 300,
   dying_explosion = "blood-explosion-small",
   can_open_gates = true,
@@ -350,13 +348,15 @@ local cat_recipe = {
   enabled = false,
   energy_required = 300, --Time needed to craft
   order = "z",
+  category = "crafting-with-fluid",
   results = {{type="item", name="cat", amount=1,probability=0.35}},
   ingredients = {
-    {type="fluid",name="water",amount=200}, 
-    {type="item",name="raw-fish",amount=20}, 
-    {type="item",name="laser-turret",amount=1},
-    {type="item",name="programmable-speaker",amount=1},
-    {type="item",name="wooden-chest",amount=1},
+    {type="fluid", name="water",amount=200}, 
+    {type="item", name="raw-fish",amount=20}, 
+    {type="item", name="laser-turret",amount=1},
+    {type="item", name="programmable-speaker",amount=1},
+    {type="item", name="wooden-chest",amount=1},
+    {type="item", name="stone", amount=10}
   },
 }
 if mods["space-age"] then

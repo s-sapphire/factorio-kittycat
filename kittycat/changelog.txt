@@ -4,6 +4,7 @@ Date: 2025-03-25
   Bugfixes:
     - The cat item is no longer hidden
     - Added setting to make cats invincible
+    - Renamed mod to "Kitty Cat" to make it more unique
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2025-03-17
