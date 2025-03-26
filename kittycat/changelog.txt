@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 2025-03-26
+  Changes:
+    - Cats opening gates is now optional (default: true)
+    - Added custom shadow graphics for cat catchers
+    - Added custom debris graphics for destroyed cat catchers
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2025-03-25
   Major Features:

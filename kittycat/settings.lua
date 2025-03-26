@@ -34,5 +34,11 @@ data:extend({
       name = "kittycat-invincible-cats",
       setting_type = "startup",
       default_value = false
-    }
+    },
+    {
+      type = "bool-setting",
+      name = "kittycat-open-gates",
+      setting_type = "startup",
+      default_value = true
+    },
   })

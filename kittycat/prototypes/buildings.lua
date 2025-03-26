@@ -1,3 +1,4 @@
+local building_scale = 0.4
 ---------------- Cat Trap Building ----------------
 local cat_trap = {
   type = "assembling-machine",
@@ -18,9 +19,7 @@ local cat_trap = {
   allowed_effects = {"speed", "consumption", "pollution", "productivity"},
   allowed_module_categories = {"speed", "efficiency"},
 
-  -- TODO make corpse graphic
-  --corpse = "__base__/graphics/entity/wooden-chest/remnants/wooden-chest-remnants.png",
-  corpse = "wooden-chest-remnants",
+  corpse = "cat-trap-remnants",
   dying_explosion = "wooden-chest-explosion",
   collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
   selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -37,21 +36,39 @@ local cat_trap = {
           height = 95,
           frame_count = 1,
           priority = "high",
-          shift = util.by_pixel(0.5, -2),
-          scale = 0.5
+          scale = building_scale
         },
         {
-          filename = "__base__/graphics/entity/wooden-chest/wooden-chest-shadow.png",
+          filename = "__kittycat__/graphics/cat_trap_shadow.png",
           priority = "high",
-          width = 104,
-          height = 40,
-          shift = util.by_pixel(10, 6.5),
+          width = 76,
+          height = 50,
+          shift = util.by_pixel(12, 8),
           draw_as_shadow = true,
-          scale = 0.5
+          scale = building_scale
         }
       }
     }
   },
 }
 
-data:extend({cat_trap})
+local cat_trap_remnants = {
+  type = "corpse",
+  name = "cat-trap-remnants",
+  icon = "__kittycat__/graphics/cat_trap.png",
+  hidden_in_factoriopedia = true,
+  flags = {"placeable-neutral", "not-on-map"},
+  --subgroup = "assembling-machine-remnants",
+  animation =
+  {
+    filename = "__kittycat__/graphics/cat_trap_remnants.png",
+    line_length = 1,
+    width = 110,
+    height = 95,
+    direction_count = 1,
+    shift = util.by_pixel(7.5, -1),
+    scale = building_scale
+  }
+}
+
+data:extend({cat_trap, cat_trap_remnants})

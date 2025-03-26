@@ -278,7 +278,6 @@ local cat_unit = {
   healing_per_tick = 0.02,
   distraction_cooldown = 300,
   dying_explosion = "blood-explosion-small",
-  can_open_gates = true,
   affected_by_tiles= true,
   vision_distance = 30,
   run_animation = catrunanimation(cat_scale, cat_tint1, cat_tint2),
@@ -318,8 +317,12 @@ local cat_unit = {
   }
 }
 
+---------------- OPTIONAL Features ----------------
 if settings.startup["kittycat-cat-belt-immunity"].value then
   cat_unit.has_belt_immunity = true
+end
+if settings.startup["kittycat-open-gates"].value then
+  cat_unit.can_open_gates = true
 end
 
 data:extend({cat_unit})
