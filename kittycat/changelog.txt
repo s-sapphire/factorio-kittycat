@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: TODO
+Date: 2025-03-25
   Major Features:
     - Added a building specifically for the luring of cats
     - The Easter egg can now only be used in this building (huzzah!)
