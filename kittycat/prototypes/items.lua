@@ -5,6 +5,7 @@ local cat_item = {
   icon = "__kittycat__/graphics/cat_icon.png",
   icon_size = 128,
   stack_size = 1,
+  weight = 5000,
   flags = {"not-stackable"},
   place_result = "cat",
   subgroup="defensive-structure",

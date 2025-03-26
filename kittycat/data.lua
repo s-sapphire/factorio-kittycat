@@ -2,7 +2,7 @@ require("prototypes.technologies")
 require("prototypes.items")
 require("prototypes.units")
 require("prototypes.buildings")
-require("prototypes.recipies")
+require("prototypes.recipes")
 
 ---------------- OPTIONAL Easter Egg Content ----------------
 if settings.startup["kittycat-easter-egg"].value then
@@ -37,5 +37,5 @@ if settings.startup["kittycat-easter-egg"].value then
     name = "mouse",
     hidden = true
   }
-  data:extend({mouse_module, mouse_mod_type})
+  data:extend({mouse_mod_type, mouse_module})
 end

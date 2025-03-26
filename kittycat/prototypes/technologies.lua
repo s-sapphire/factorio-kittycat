@@ -11,6 +11,10 @@ data:extend ({
         type = "unlock-recipe",
         recipe = "zcat-luring"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "cat-trap"
+      }
     },
     prerequisites = {"circuit-network", "laser-turret"},
     unit =

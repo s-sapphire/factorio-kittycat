@@ -16,7 +16,7 @@ local cat_trap = {
   crafting_categories = {"cat-luring"},
   module_slots = 2,
   allowed_effects = {"speed", "consumption", "pollution", "productivity"},
-  allowed_module_categories = {"speed", "efficiency", "mouse"},
+  allowed_module_categories = {"speed", "efficiency"},
 
   -- TODO make corpse graphic
   --corpse = "__base__/graphics/entity/wooden-chest/remnants/wooden-chest-remnants.png",

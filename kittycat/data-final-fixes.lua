@@ -19,7 +19,7 @@ if settings.startup["kittycat-invincible-cats"].value then
 end
 
 -- plz no recycle kthx
-if mods["space-age"] then
+if mods["quality"] then
   data.raw["recipe"]["cat-recycling"] = nil
 end
 

@@ -10,6 +10,7 @@ Date: TODO
     - Decreased size of cat hitbox
     - Updated to higher-resolution graphics that had been here the whole time
     - Disabled quality for cat recipe because all cats are perfect
+    - Put the cats on a diet. Weight lowered from 200kg to 5kg
 
   Balancing:
     - Made luring cats much cheaper and easier
