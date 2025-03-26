@@ -1,27 +1,4 @@
--- As of Factorio 2.0, we can no longer have a module be disallowed in a recipe
--- by default, nor can it be blacklisted, this means we need to go through every
--- recipe and specifically add whitelists to them that include everything but the
--- mouse module
-
---if settings.startup["kittycat-easter-egg"] then
---  local module_categories = {}
---  for _, category in pairs(data.raw["module-category"]) do
---    table.insert(module_categories, category)
---  end
---  module_categories.mouse = nil
-
---  for rec_name, rec in pairs(data.raw["recipe"]) do
---    if rec_name ~= "zcat-luring" then
---      print(rec_name)
---      if not rec.allowed_module_categories then
---        -- Copy the table, so any time anything else messes with it, it doesn't
---        -- mess up all recipes
---        rec.allowed_module_categories = table.deepcopy(module_categories)
---      end
---    end
---  end
---end
-
+-- This is performed here, in case other mods added any new damage types
 if settings.startup["kittycat-invincible-cats"].value then
   -- Make our cats very, very hard to kill
   local cat_unit = data.raw["unit"].cat
@@ -39,4 +16,28 @@ if settings.startup["kittycat-invincible-cats"].value then
       })
   end
   cat_unit.resistances = resistances
+end
+
+-- plz no recycle kthx
+if mods["space-age"] then
+  data.raw["recipe"]["cat-recycling"] = nil
+end
+
+-- As of Factorio 2.0, we can no longer have a module (or module category) be disallowed in a
+-- recipe (or machine) by default, nor can it be blacklisted. This means we need to go through
+-- every machine and specifically add whitelists to them that include everything BUT the mouse
+-- module category.
+if settings.startup["kittycat-easter-egg"] then
+  local module_categories = {}
+  for cname, _ in pairs(data.raw["module-category"]) do
+    if cname ~= "mouse" then
+      table.insert(module_categories, cname)
+    end
+  end
+
+  for mname, machine in pairs(data.raw["assembling-machine"]) do
+    if not machine.allowed_module_categories then
+      machine.allowed_module_categories = table.deepcopy(module_categories)
+    end
+  end
 end

@@ -1,4 +1,4 @@
-cat_scale = 0.3
+cat_scale = 0.15
 cat_tint1 = {r = 0.56, g = 0.46, b = 0.42, a = 0.65}
 cat_tint2 = {r = 1, g = 0.63, b = 0, a = 0.4}
 
@@ -7,8 +7,8 @@ function catrunanimation(scale, tint1, tint2)
   return {
     layers = {
       {
-        width = 512 / 2,
-        height = 300 / 2,
+        width = 512,
+        height = 300,
         frame_count = 5,
         direction_count = 16,
         animation_speed = 0.3,
@@ -16,7 +16,7 @@ function catrunanimation(scale, tint1, tint2)
         scale = scale,
         stripes = {
           {
-            filename = "__kittycat__/graphics/cat_lr.png",
+            filename = "__kittycat__/graphics/cat_hr.png",
             width_in_frames = 8,
             height_in_frames = 10
           }
@@ -266,8 +266,8 @@ local cat_unit = {
     "breaths-air",
     "player-creation",
   },
-  collision_box = {{-0.3, -0.7}, {0.9, 0.7}},
-  selection_box = {{-0.3, -0.7}, {0.9, 0.7}},
+  collision_box = {{-0.2, -0.6}, {0.4, 0.6}},
+  selection_box = {{-0.3, -0.7}, {0.5, 0.7}},
   collision_mask = collision_mask,
   min_pursue_time = 10 * 60,
   max_pursue_distance = 80,

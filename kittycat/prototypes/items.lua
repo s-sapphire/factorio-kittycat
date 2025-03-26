@@ -10,4 +10,14 @@ local cat_item = {
   subgroup="defensive-structure",
 }
 
-data:extend({cat_item})
+local cat_trap_item = {
+  type = "item",
+  name = "cat-trap",
+  icon = "__kittycat__/graphics/cat_trap.png",
+  icon_size = 95,
+  stack_size = 50,
+  place_result = "cat-trap",
+  subgroup="defensive-structure",
+}
+
+data:extend({cat_item, cat_trap_item})
