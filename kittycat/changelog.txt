@@ -26,6 +26,7 @@ Date: 2025-03-25
   Changes:
     - Added setting to make cats invincible
     - Renamed mod to "Kitty Cat" to make it more unique
+    - Removed support for the mods that didn't update to 2.0
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2025-03-17
