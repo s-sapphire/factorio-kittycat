@@ -17,7 +17,8 @@ if settings.startup["kittycat-easter-egg"].value then
   table.insert(cat_trap.allowed_module_categories, "mouse")
 
   ---------------- Mouse Module ----------------
-  local mouse_module = {
+  local mouse_module =
+  {
     type = "module",
     name = "mouse",
     icon = "__kittycat__/graphics/mouse.png",
@@ -32,7 +33,8 @@ if settings.startup["kittycat-easter-egg"].value then
     --limitation = {"zcat-luring"},
     --limitation_message_key="cat_luring_only"
   }
-  local mouse_mod_type = {
+  local mouse_mod_type =
+  {
     type = "module-category",
     name = "mouse",
     hidden = true

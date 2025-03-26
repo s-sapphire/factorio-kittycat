@@ -1,4 +1,5 @@
-data:extend({
+data:extend(
+  {
     --{
     --    type = "bool-setting",
     --    name = "kittycat-collision-player",

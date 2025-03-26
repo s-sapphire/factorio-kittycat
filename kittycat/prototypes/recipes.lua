@@ -1,10 +1,12 @@
 ---------------- Cat Recipe ----------------
-local recipe_category = {
+local recipe_category =
+{
   type = "recipe-category",
   name = "cat-luring"
 }
 
-local cat_recipe = {
+local cat_recipe =
+{
   type = "recipe",
   name = "zcat-luring",
   allow_productivity = true,
@@ -18,7 +20,8 @@ local cat_recipe = {
   --category = "crafting-with-fluid",
   category = "cat-luring",
   results = {{type="item", name="cat", amount=1,probability=0.5}},
-  ingredients = {
+  ingredients =
+  {
     --{type="fluid", name="water",amount=200}, 
     {type="item", name="raw-fish",amount=5}, 
     {type="item", name="laser-turret",amount=1},
@@ -29,7 +32,8 @@ local cat_recipe = {
 }
 
 if mods["space-age"] then
-  cat_recipe.surface_conditions = {
+  cat_recipe.surface_conditions =
+  {
     {
       property = "pressure",
       min = 100
@@ -37,11 +41,13 @@ if mods["space-age"] then
   }
 end
 
-local cat_trap_recipe = {
+local cat_trap_recipe =
+{
   type = "recipe",
   name = "cat-trap",
   results = {{type="item", name="cat-trap", amount=1}},
-  ingredients = {
+  ingredients =
+  {
     {type="item", name="wooden-chest", amount=1},
     {type="item", name="iron-stick", amount=1}
   }

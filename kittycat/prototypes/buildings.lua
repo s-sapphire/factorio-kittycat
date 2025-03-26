@@ -1,6 +1,7 @@
 local building_scale = 0.4
 ---------------- Cat Trap Building ----------------
-local cat_trap = {
+local cat_trap =
+{
   type = "assembling-machine",
   name = "cat-trap",
   icon = "__kittycat__/graphics/cat_trap.png",
@@ -8,7 +9,8 @@ local cat_trap = {
   minable = {mining_time = 0.2, result = "cat-trap"},
   max_health = 120,
   energy_usage = "1MW",
-  energy_source = {
+  energy_source =
+  {
     type = "electric",
     usage_priority = "secondary-input",
     emissions_per_minute = { pollution = 2 }
@@ -27,7 +29,8 @@ local cat_trap = {
   graphics_set =
   {
     -- TODO Make animation of laser under box
-    animation = {
+    animation =
+    {
       layers =
       {
         {
@@ -52,7 +55,8 @@ local cat_trap = {
   },
 }
 
-local cat_trap_remnants = {
+local cat_trap_remnants =
+{
   type = "corpse",
   name = "cat-trap-remnants",
   icon = "__kittycat__/graphics/cat_trap.png",

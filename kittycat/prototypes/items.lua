@@ -1,5 +1,6 @@
 ---------------- Cat Item ----------------
-local cat_item = {
+local cat_item =
+{
   type = "item",
   name = "cat",
   icon = "__kittycat__/graphics/cat_icon.png",
@@ -11,7 +12,8 @@ local cat_item = {
   subgroup="defensive-structure",
 }
 
-local cat_trap_item = {
+local cat_trap_item =
+{
   type = "item",
   name = "cat-trap",
   icon = "__kittycat__/graphics/cat_trap.png",
