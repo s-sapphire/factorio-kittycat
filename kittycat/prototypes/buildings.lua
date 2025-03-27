@@ -4,7 +4,7 @@ local cat_trap =
 {
   type = "assembling-machine",
   name = "cat-trap",
-  icon = "__kittycat__/graphics/cat_trap.png",
+  icon = "__kittycat__/graphics/cat-trap.png",
   flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
   minable = {mining_time = 0.2, result = "cat-trap"},
   max_health = 120,
@@ -34,7 +34,7 @@ local cat_trap =
       layers =
       {
         {
-          filename = "__kittycat__/graphics/cat_trap.png",
+          filename = "__kittycat__/graphics/cat-trap.png",
           width = 112,
           height = 95,
           frame_count = 1,
@@ -42,7 +42,7 @@ local cat_trap =
           scale = building_scale
         },
         {
-          filename = "__kittycat__/graphics/cat_trap_shadow.png",
+          filename = "__kittycat__/graphics/cat-trap-shadow.png",
           priority = "high",
           width = 76,
           height = 50,
@@ -59,13 +59,13 @@ local cat_trap_remnants =
 {
   type = "corpse",
   name = "cat-trap-remnants",
-  icon = "__kittycat__/graphics/cat_trap.png",
+  icon = "__kittycat__/graphics/cat-trap.png",
   hidden_in_factoriopedia = true,
   flags = {"placeable-neutral", "not-on-map"},
   --subgroup = "assembling-machine-remnants",
   animation =
   {
-    filename = "__kittycat__/graphics/cat_trap_remnants.png",
+    filename = "__kittycat__/graphics/cat-trap-remnants.png",
     line_length = 1,
     width = 110,
     height = 95,

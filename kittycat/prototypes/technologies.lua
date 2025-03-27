@@ -3,7 +3,7 @@ data:extend (
     {
       type = "technology",
       name = "cat-luring",
-      icon = "__kittycat__/graphics/catresearch.png", 
+      icon = "__kittycat__/graphics/cat-research.png",
       icon_size = 128,
 
       effects =

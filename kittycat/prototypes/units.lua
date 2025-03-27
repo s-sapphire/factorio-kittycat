@@ -1,4 +1,4 @@
--- Used to make the "cat" (biter) attack animation
+-- Used for the "cat" (biter) attack animation
 require("__base__.prototypes.entity.biter-animations")
 
 local cat_scale = 0.15
@@ -21,7 +21,7 @@ local cat_run_animation =
       stripes =
       {
         {
-          filename = "__kittycat__/graphics/cat_hr.png",
+          filename = "__kittycat__/graphics/cat-hr.png",
           width_in_frames = 8,
           height_in_frames = 10
         }
@@ -42,11 +42,65 @@ if settings.startup["kittycat-collision-trains"].value then
   collision_mask.layers.train = true
 end
 
+-- Copied from poison-cloud-visual-dummy
+local cat_death_smoke =
+{
+  type = "smoke-with-trigger",
+  name = "cat-death-smoke",
+  flags = {"not-on-map"},
+  hidden = true,
+  show_when_smoke_off = true,
+  --particle_count = 24,
+  --particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 },
+  --particle_distance_scale_factor = 0.5,
+  --particle_scale_factor = { 1, 0.707 },
+  --particle_duration_variation = 60 * 3,
+  --wave_speed = { 0.5 / 80, 0.5 / 60 },
+  --wave_distance = { 1, 0.5 },
+  --spread_duration_variation = 300 - 20,
+  particle_count = 10,
+  particle_spread = {1, 1},
+
+  render_layer = "object",
+
+  affected_by_wind = true,
+  cyclic = true,
+  duration = (1 + 2) * 60,
+  fade_away_duration = 2 * 60,
+  --spread_duration = (300 - 20) / 2 ,
+  --color = {0.014, 0.358, 0.395, 0.322}, -- #035b6452
+  color = {1, 1, 1, 1},
+
+  animation =
+  {
+    width = 152,
+    height = 120,
+    line_length = 5,
+    frame_count = 60,
+    shift = {-0.53125, -0.4375},
+    priority = "high",
+    animation_speed = 0.25,
+    filename = "__base__/graphics/entity/smoke/smoke.png",
+    flags = { "smoke" }
+  },
+  --working_sound =
+  --{
+  --  sound =
+  --  {
+  --    filename = "__kittycat__/sound/cat-die.ogg",
+  --    volume = 0.5,
+  --    --audible_distance_modifier = 0.8
+  --  },
+  --  max_sounds_per_prototype = 1,
+  --  match_volume_to_activity = true
+  --}
+}
+
 local cat_unit =
 {
   type = "unit",
   name = "cat",
-  icon = "__kittycat__/graphics/cat_icon.png",
+  icon = "__kittycat__/graphics/cat-icon.png",
   icon_size = 128,
   flags =
   {
@@ -66,7 +120,17 @@ local cat_unit =
   movement_speed = 0.2,
   healing_per_tick = 0.02,
   distraction_cooldown = 300,
-  dying_explosion = "blood-explosion-small",
+  --dying_explosion = "blood-explosion-small",
+  dying_sound =
+  {
+    filename = "__kittycat__/sound/cat-vanish.ogg",
+    volume = 0.5
+  },
+  dying_trigger_effect =
+  {
+    type = "create-smoke",
+    entity_name = "cat-death-smoke"
+  },
   affected_by_tiles= true,
   vision_distance = 30,
   run_animation = cat_run_animation,
@@ -74,7 +138,12 @@ local cat_unit =
   {
     sound =
     {
-      filename = "__kittycat__/sound/meow3.ogg",
+      variations =
+      {
+        {filename = "__kittycat__/sound/meow1.ogg"},
+        {filename = "__kittycat__/sound/meow2.ogg", volume = 0.5},
+        {filename = "__kittycat__/sound/meow3.ogg", volume = 0.5},
+      },
       volume = 0.5,
       aggregation = {max_count = 1, count_already_playing = true, remove = true}
     },
@@ -108,7 +177,7 @@ local cat_unit =
     animation = biterattackanimation(small_biter_scale/2, cat_tint1, cat_tint2),
     sound =
     {
-      filename = "__kittycat__/sound/cat_hiss.ogg",
+      filename = "__kittycat__/sound/cat-hiss.ogg",
       volume = 0.5,
       aggregation = {max_count = 2, remove = true, count_already_playing = true}
     }
@@ -123,4 +192,4 @@ if settings.startup["kittycat-open-gates"].value then
   cat_unit.can_open_gates = true
 end
 
-data:extend({cat_unit})
+data:extend({cat_death_smoke, cat_unit})

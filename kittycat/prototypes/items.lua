@@ -3,7 +3,7 @@ local cat_item =
 {
   type = "item",
   name = "cat",
-  icon = "__kittycat__/graphics/cat_icon.png",
+  icon = "__kittycat__/graphics/cat-icon.png",
   icon_size = 128,
   stack_size = 1,
   weight = 5000,
@@ -16,7 +16,7 @@ local cat_trap_item =
 {
   type = "item",
   name = "cat-trap",
-  icon = "__kittycat__/graphics/cat_trap.png",
+  icon = "__kittycat__/graphics/cat-trap.png",
   icon_size = 95,
   stack_size = 50,
   place_result = "cat-trap",
