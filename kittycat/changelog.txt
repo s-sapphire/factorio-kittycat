@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 2025-03-27
-	TODO
+  Changes:
+    - Cats no longer die, but leave in a puff of smoke instead
+    - Cats now make more than one meow type while walking around
+    - Added circuit connectivity to the cat catcher
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 2025-03-26
