@@ -1,4 +1,18 @@
 local building_scale = 0.4
+
+--local connector_template = table.deepcopy(universal_connector_template)
+--for _, v in pairs(connector_template) do
+--  if v.scale then
+--    v.scale = v.scale*0.8
+--  end
+--end
+--print("=================================")
+--print(serpent.block(connector_template))
+--print("=================================")
+
+local conn_offset = util.by_pixel(-5, -6)
+local circuit_connector_def = 
+{variation=9, main_offset=conn_offset, shadow_offset=conn_offset, show_shadow=true}
 ---------------- Cat Trap Building ----------------
 local cat_trap =
 {
@@ -21,6 +35,15 @@ local cat_trap =
   allowed_effects = {"speed", "consumption", "pollution", "productivity"},
   allowed_module_categories = {"speed", "efficiency"},
 
+  circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+  --circuit_connector = circuit_connector_definitions.create_vector(connector_template,
+  circuit_connector = circuit_connector_definitions.create_vector(universal_connector_template,
+    {
+      circuit_connector_def,
+      circuit_connector_def,
+      circuit_connector_def,
+      circuit_connector_def,
+    }),
   corpse = "cat-trap-remnants",
   dying_explosion = "wooden-chest-explosion",
   collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
