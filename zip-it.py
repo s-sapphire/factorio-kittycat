@@ -8,6 +8,9 @@ from pathlib import Path
 from sys import stderr
 # from zipfile import ZipFile
 import shutil
+import os
+
+os.chdir(Path(__file__).resolve().parent)
 
 mod_name = "kittycat"
 mod_path = Path(mod_name)
@@ -46,7 +49,7 @@ zf_path = Path(zf_name + '.zip')
 if zf_path.exists():
     if not input(f"'{zf_path}' already exists. Are you sure you want to replace it? [y/n] ")\
             .lower().startswith('y'):
-        print("Aported.")
+        print("Aborted.")
         exit(2)
 
 # make_archive automaticall adds the .zip extension to the filename
