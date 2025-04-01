@@ -50,8 +50,8 @@ if zf_path.exists():
         exit(2)
 
 # I find it wild that doing this recursively is not a built-in method in the zipfile module
-compression = zf.ZIP_STORED
-with zf.ZipFile(zf_path, 'w', compression) as zfile:
+compression = zf.ZIP_DEFLATED # Factorio doesn't seem to support bzip2 zips
+with zf.ZipFile(zf_path, 'w', compression, 9) as zfile:
     for dirpath, dirnames, filenames in mod_path.walk():
         for fn in filenames:
             zfile.write(dirpath/fn)
