@@ -40,8 +40,8 @@ Date: 2025-03-25
     - Made luring cats much cheaper and easier
 
   Bugfixes:
-    - Cats can no longer be recycled (yikes)
---------------------------------------------------------------------------------------------------
+    - Cats can no longer be recycled D:
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 2025-03-25
   Bugfixes:
