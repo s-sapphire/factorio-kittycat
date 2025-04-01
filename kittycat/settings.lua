@@ -2,43 +2,43 @@ data:extend(
   {
     --{
     --    type = "bool-setting",
-    --    name = "kittycat-collision-player",
+    --    name = "kcat-collision-player",
     --    setting_type = "startup",
     --    default_value = true
     --},
     {
       type = "bool-setting",
-      name = "kittycat-collision-trains",
+      name = "kcat-collision-trains",
       setting_type = "startup",
       default_value = false
     },
     {
       type = "bool-setting",
-      name = "kittycat-cat-for-space",
+      name = "kcat-cat-for-space",
       setting_type = "startup",
       default_value = true
     },
     {
       type = "bool-setting",
-      name = "kittycat-cat-belt-immunity",
+      name = "kcat-cat-belt-immunity",
       setting_type = "startup",
       default_value = false
     },
     {
       type = "bool-setting",
-      name = "kittycat-easter-egg",
+      name = "kcat-easter-egg",
       setting_type = "startup",
       default_value = true
     },
     {
       type = "bool-setting",
-      name = "kittycat-invincible-cats",
+      name = "kcat-invincible-cats",
       setting_type = "startup",
       default_value = false
     },
     {
       type = "bool-setting",
-      name = "kittycat-open-gates",
+      name = "kcat-open-gates",
       setting_type = "startup",
       default_value = true
     },

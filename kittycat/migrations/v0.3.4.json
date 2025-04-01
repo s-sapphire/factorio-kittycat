@@ -1,0 +1,30 @@
+{
+    "kcat-description": [
+        "Change internal names to avoid future naming conflicts with other mods"
+    ],
+    "entity":
+    [
+        ["cat", "kcat-cat"],
+        ["cat-trap", "kcat-cat-trap"]
+    ],
+    "item":
+    [
+        ["cat", "kcat-cat"],
+        ["cat-trap", "kcat-cat-trap"],
+        ["mouse", "kcat-mouse"]
+    ],
+    "module":
+    [
+        ["mouse", "kcat-mouse"]
+    ],
+    "recipe":
+    [
+        ["cat", "kcat-cat"],
+        ["cat-trap", "kcat-cat-trap"],
+        ["zcat-luring", "kcat-cat-luring"]
+    ],
+    "technology":
+    [
+        ["cat-luring", "kcat-cat-luring"]
+    ]
+}

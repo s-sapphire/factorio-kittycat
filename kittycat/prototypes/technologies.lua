@@ -2,7 +2,7 @@ data:extend (
   {
     {
       type = "technology",
-      name = "cat-luring",
+      name = "kcat-cat-luring",
       icon = "__kittycat__/graphics/cat-research.png",
       icon_size = 128,
 
@@ -10,11 +10,11 @@ data:extend (
       {
         {
           type = "unlock-recipe",
-          recipe = "zcat-luring"
+          recipe = "kcat-cat-luring"
         },
         {
           type = "unlock-recipe",
-          recipe = "cat-trap"
+          recipe = "kcat-cat-trap"
         }
       },
       prerequisites = {"circuit-network", "laser-turret"},

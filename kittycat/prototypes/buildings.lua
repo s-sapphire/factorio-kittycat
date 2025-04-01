@@ -17,10 +17,10 @@ local circuit_connector_def =
 local cat_trap =
 {
   type = "assembling-machine",
-  name = "cat-trap",
+  name = "kcat-cat-trap",
   icon = "__kittycat__/graphics/cat-trap.png",
   flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
-  minable = {mining_time = 0.2, result = "cat-trap"},
+  minable = {mining_time = 0.2, result = "kcat-cat-trap"},
   max_health = 120,
   energy_usage = "1MW",
   energy_source =
@@ -30,7 +30,7 @@ local cat_trap =
     emissions_per_minute = { pollution = 2 }
   },
   crafting_speed = 1,
-  crafting_categories = {"cat-luring"},
+  crafting_categories = {"kcat-cat-luring"},
   module_slots = 2,
   allowed_effects = {"speed", "consumption", "pollution", "productivity"},
   allowed_module_categories = {"speed", "efficiency"},

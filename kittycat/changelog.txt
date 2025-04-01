@@ -2,6 +2,11 @@
 Version: 0.3.3
 Date: 2025-03-27
   Changes:
+    - Reworked internal names to avoid possible future mod conflicts
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 2025-03-27
+  Changes:
     - Cats no longer die, but leave in a puff of smoke instead
     - Cats now make more than one meow type while walking around
     - Added circuit connectivity to the cat catcher
@@ -35,7 +40,7 @@ Date: 2025-03-25
     - Made luring cats much cheaper and easier
 
   Bugfixes:
-    - Cats can no longer be recycled D:
+    - Cats can no longer be recycled (yikes)
 --------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 2025-03-25

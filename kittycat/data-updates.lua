@@ -12,10 +12,10 @@ local function add_ingredient(recipe_name, ingredient)
 end
 
 
-if settings.startup["kittycat-cat-for-space"].value then
+if settings.startup["kcat-cat-for-space"].value then
   if mods["space-age"] then
-    add_ingredient("space-platform-starter-pack", {type="item", name="cat", amount=1})
+    add_ingredient("space-platform-starter-pack", {type="item", name="kcat-cat", amount=1})
   else
-    add_ingredient("satellite", {type="item", name="cat", amount=1})
+    add_ingredient("satellite", {type="item", name="kcat-cat", amount=1})
   end
 end

@@ -1,5 +1,5 @@
 -- This is performed here, in case other mods added any new damage types
-if settings.startup["kittycat-invincible-cats"].value then
+if settings.startup["kcat-invincible-cats"].value then
   -- Make our cats very, very hard to kill
   local cat_unit = data.raw["unit"].cat
 
@@ -27,10 +27,10 @@ end
 -- recipe (or machine) by default, nor can it be blacklisted. This means we need to go through
 -- every machine and specifically add whitelists to them that include everything BUT the mouse
 -- module category.
-if settings.startup["kittycat-easter-egg"] then
+if settings.startup["kcat-easter-egg"] then
   local module_categories = {}
   for cname, _ in pairs(data.raw["module-category"]) do
-    if cname ~= "mouse" then
+    if cname ~= "kcat-mouse" then
       table.insert(module_categories, cname)
     end
   end

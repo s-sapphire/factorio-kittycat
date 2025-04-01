@@ -34,11 +34,11 @@ local cat_run_animation =
 local collision_mask = {not_colliding_with_itself = true,
   layers = {is_object = true}
 }
---if settings.startup["kittycat-collision-player"].value then
+--if settings.startup["kcat-collision-player"].value then
 --  collision_mask.layers.player = true
 --end
 collision_mask.layers.player = true
-if settings.startup["kittycat-collision-trains"].value then
+if settings.startup["kcat-collision-trains"].value then
   collision_mask.layers.train = true
 end
 
@@ -99,7 +99,7 @@ local cat_death_smoke =
 local cat_unit =
 {
   type = "unit",
-  name = "cat",
+  name = "kcat-cat",
   icon = "__kittycat__/graphics/cat-icon.png",
   icon_size = 128,
   flags =
@@ -115,7 +115,7 @@ local cat_unit =
   min_pursue_time = 10 * 60,
   max_pursue_distance = 80,
   max_health = 675,
-  minable = {mining_time = 1, result = "cat"},
+  minable = {mining_time = 1, result = "kcat-cat"},
   distance_per_frame = 0.1,
   movement_speed = 0.2,
   healing_per_tick = 0.02,
@@ -185,10 +185,10 @@ local cat_unit =
 }
 
 ---------------- OPTIONAL Features ----------------
-if settings.startup["kittycat-cat-belt-immunity"].value then
+if settings.startup["kcat-cat-belt-immunity"].value then
   cat_unit.has_belt_immunity = true
 end
-if settings.startup["kittycat-open-gates"].value then
+if settings.startup["kcat-open-gates"].value then
   cat_unit.can_open_gates = true
 end
 
