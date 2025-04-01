@@ -44,7 +44,7 @@ local cat_trap =
       circuit_connector_def,
       circuit_connector_def,
     }),
-  corpse = "cat-trap-remnants",
+  corpse = "kcat-cat-trap-remnants",
   dying_explosion = "wooden-chest-explosion",
   collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
   selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -81,7 +81,7 @@ local cat_trap =
 local cat_trap_remnants =
 {
   type = "corpse",
-  name = "cat-trap-remnants",
+  name = "kcat-cat-trap-remnants",
   icon = "__kittycat__/graphics/cat-trap.png",
   hidden_in_factoriopedia = true,
   flags = {"placeable-neutral", "not-on-map"},

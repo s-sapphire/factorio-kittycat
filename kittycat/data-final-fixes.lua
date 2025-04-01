@@ -20,7 +20,7 @@ end
 
 -- plz no recycle kthx
 if mods["quality"] then
-  data.raw["recipe"]["cat-recycling"] = nil
+  data.raw["recipe"]["kcat-cat-recycling"] = nil
 end
 
 -- As of Factorio 2.0, we can no longer have a module (or module category) be disallowed in a

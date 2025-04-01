@@ -46,7 +46,7 @@ end
 local cat_death_smoke =
 {
   type = "smoke-with-trigger",
-  name = "cat-death-smoke",
+  name = "kcat-cat-death-smoke",
   flags = {"not-on-map"},
   hidden = true,
   show_when_smoke_off = true,
@@ -83,17 +83,6 @@ local cat_death_smoke =
     filename = "__base__/graphics/entity/smoke/smoke.png",
     flags = { "smoke" }
   },
-  --working_sound =
-  --{
-  --  sound =
-  --  {
-  --    filename = "__kittycat__/sound/cat-die.ogg",
-  --    volume = 0.5,
-  --    --audible_distance_modifier = 0.8
-  --  },
-  --  max_sounds_per_prototype = 1,
-  --  match_volume_to_activity = true
-  --}
 }
 
 local cat_unit =
@@ -129,7 +118,7 @@ local cat_unit =
   dying_trigger_effect =
   {
     type = "create-smoke",
-    entity_name = "cat-death-smoke"
+    entity_name = "kcat-cat-death-smoke"
   },
   affected_by_tiles= true,
   vision_distance = 30,

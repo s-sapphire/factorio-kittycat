@@ -6,8 +6,7 @@ import argparse
 import json
 from pathlib import Path
 from sys import stderr
-# from zipfile import ZipFile
-import shutil
+import zipfile as zf
 import os
 
 os.chdir(Path(__file__).resolve().parent)
@@ -22,18 +21,17 @@ parser.add_argument('ver', nargs='?', metavar="VERSION", help="version of the mo
 
 version = parser.parse_args().ver
 
+# Read info.json
 with open(mod_path/'info.json', 'r') as f:
     info_ver = json.load(f)['version']
 
+# Read changelog.txt
 with open(mod_path/'changelog.txt', 'r') as f:
     # We expect very precise syntax here already, so lets just assume it
     f.readline()
     change_ver = f.readline()[9:].strip()
 
-# if version is None:
-#     version = info_ver
-
-# if version != info_ver or version != change_ver:
+# Check for version inconsistencies
 if info_ver != change_ver or (version is not None and version != info_ver):
     print("Version mismatch:")
     if version is not None:
@@ -43,16 +41,19 @@ if info_ver != change_ver or (version is not None and version != info_ver):
     exit(1)
 version = info_ver
 
-zf_name = mod_name + '_' + version
-zf_path = Path(zf_name + '.zip')
-
+# Ask if overwriting
+zf_path = Path(mod_name + '_' + version + '.zip')
 if zf_path.exists():
     if not input(f"'{zf_path}' already exists. Are you sure you want to replace it? [y/n] ")\
             .lower().startswith('y'):
         print("Aborted.")
         exit(2)
 
-# make_archive automaticall adds the .zip extension to the filename
-shutil.make_archive(zf_name, 'zip', mod_path)
+# I find it wild that doing this recursively is not a built-in method in the zipfile module
+compression = zf.ZIP_STORED
+with zf.ZipFile(zf_path, 'w', compression) as zfile:
+    for dirpath, dirnames, filenames in mod_path.walk():
+        for fn in filenames:
+            zfile.write(dirpath/fn)
 
-print(f"Wrote: {zf_name}.zip")
+print(f"Wrote: {zf_path}")
