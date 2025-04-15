@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 2025-04-14
+  Bugfixes:
+    - Fixed incompatibility with Pyanodon's Alien Life which caused its creatures to be available as modules in most machines
+---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 2025-04-01
   Changes:

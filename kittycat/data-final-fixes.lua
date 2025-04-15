@@ -27,7 +27,7 @@ end
 -- recipe (or machine) by default, nor can it be blacklisted. This means we need to go through
 -- every machine and specifically add whitelists to them that include everything BUT the mouse
 -- module category.
-if settings.startup["kcat-easter-egg"] then
+if settings.startup["kcat-easter-egg"].value then
   local module_categories = {}
   for cname, _ in pairs(data.raw["module-category"]) do
     if cname ~= "kcat-mouse" then
@@ -35,9 +35,16 @@ if settings.startup["kcat-easter-egg"] then
     end
   end
 
-  for mname, machine in pairs(data.raw["assembling-machine"]) do
-    if not machine.allowed_module_categories then
-      machine.allowed_module_categories = table.deepcopy(module_categories)
+  local machine_types = {"assembling-machine", "furnace", "lab", "beacon", "mining-drill", "rocket-silo"}
+  for _, machine_type in pairs(machine_types) do
+    for mname, machine in pairs(data.raw[machine_type]) do
+      if not machine.allowed_module_categories then
+        machine.allowed_module_categories = module_categories
+      end
+      if mname ~= "kcat-cat-trap" then
+        -- In case someone else has done this already and added our category
+        machine.allowed_module_categories["kcat-mouse"] = nil
+      end
     end
   end
 end
