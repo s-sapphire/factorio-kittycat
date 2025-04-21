@@ -1,7 +1,7 @@
 -- This is performed here, in case other mods added any new damage types
 if settings.startup["kcat-invincible-cats"].value then
   -- Make our cats very, very hard to kill
-  local cat_unit = data.raw["unit"].cat
+  local cat_unit = data.raw["unit"]["kcat-cat"]
 
   cat_unit.max_health = 1000000
   cat_unit.healing_per_tick = 1000000
