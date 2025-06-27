@@ -1,9 +1,27 @@
 -- Used for the "cat" (biter) attack animation
 require("__base__.prototypes.entity.biter-animations")
 
+
+local blank = {
+  filename    = "__kittycat__/graphics/blank.png",
+  width       = 1,
+  height      = 1,
+  frame_count = 1,
+  run_mode    = "forward"
+}
+
 local cat_scale = 0.15
 local cat_tint1 = {r = 0.56, g = 0.46, b = 0.42, a = 0.65}
 local cat_tint2 = {r = 1, g = 0.63, b = 0, a = 0.4}
+
+local cat_attack_animation = cat_attack_animation or blank
+
+if settings.startup["kcat-attack-animation"].value then 
+	cat_attack_animation = biterattackanimation(small_biter_scale/2, cat_tint1, cat_tint2)
+else 
+	cat_attack_animation = blank
+end
+
 
 ---------------- Cat Animations ----------------
 local cat_run_animation = 
@@ -163,7 +181,7 @@ local cat_unit =
     },
     ammo_category = "melee",
     -- TODO make custom animations
-    animation = biterattackanimation(small_biter_scale/2, cat_tint1, cat_tint2),
+    animation = cat_attack_animation,
     sound =
     {
       filename = "__kittycat__/sound/cat-hiss.ogg",
