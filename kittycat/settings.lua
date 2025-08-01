@@ -42,4 +42,10 @@ data:extend(
       setting_type = "startup",
       default_value = true
     },
+	{
+      type = "bool-setting",
+      name = "kcat-attack-animation",
+      setting_type = "startup",
+      default_value = false
+    },
   })

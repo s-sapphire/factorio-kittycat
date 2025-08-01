@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 2025-06-26
+  Changes:
+    - Added Setting to make toggle biter attack animation transformation
+    - Animation is toggled off by default resulting in a static cat instead of a biter when attacking
+---------------------------------------------------------------------------------------------------
 Version: 0.3.6
 Date: 2025-04-21
   Bugfixes:
